@@ -1,4 +1,4 @@
-part of 'mid_level_network.dart';
+part of '../mid_level_network.dart';
 
 class MidLevelNet {
   MidLevelNet._();

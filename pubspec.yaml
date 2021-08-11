@@ -1,7 +1,7 @@
 name: mid_level_network
 description: A mid-level network framework
 version: 0.0.1
-homepage:
+homepage: https://github.com/nick45chen/mid_level_network
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
