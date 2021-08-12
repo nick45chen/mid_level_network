@@ -20,7 +20,7 @@ class MNet {
     } on MNetError catch (e) {
       error = e;
       response = e.data;
-      _printLog('HiNetError: ${e.message}');
+      _printLog('MNetError: ${e.message}');
     } catch (e) {
       // 其他異常
       error = e;
@@ -57,14 +57,14 @@ class MNet {
   Future<dynamic> _send<T>(MNetRequest request) async {
     _printLog('${request.httpMethod()} url: ${request.url()}');
     // 使用 mock 發送請求數據
-    //HiNetAdapter adapter = MockAdapter();
+    //MNetAdapter adapter = MockAdapter();
 
     // 使用 dio 發送請求
-    //HiNetAdapter adapter = DioAdapter();
+    //MNetAdapter adapter = DioAdapter();
 
     /// todo: HttpAdapter 有問題，以後再處理
     // 使用 http 發送請求
-    //HiNetAdapter adapter = HttpAdapter();
+    //MNetAdapter adapter = HttpAdapter();
     //return adapter.send(request);
 
     /// todo: return adapter

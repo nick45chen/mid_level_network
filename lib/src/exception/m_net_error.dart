@@ -17,7 +17,7 @@ class MNetError implements Exception {
 class NeedLoginError extends MNetError {
   NeedLoginError({
     int code = 401,
-    String message = '請先登錄',
+    String message = '請先登入',
   }) : super(code: code, message: message);
 }
 
