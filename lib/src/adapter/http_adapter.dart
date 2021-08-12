@@ -40,7 +40,7 @@ class HttpAdapter extends MNetAdapter {
   }
 
   /// 構建 MNetResponse
-  MNetResponse _buildResponse(Response response, MNetRequest request) {
+  MNetResponse _buildResponse(httpLib.Response response, MNetRequest request) {
     /// 先將 String 類型數據 json 編碼為 Map 數據
     Map<String, dynamic> responseData = jsonDecode(response.body);
     return MNetResponse(

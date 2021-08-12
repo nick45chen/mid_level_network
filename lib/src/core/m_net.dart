@@ -60,10 +60,10 @@ class MNet {
     //MNetAdapter adapter = MockAdapter();
 
     // 使用 dio 發送請求
-    //MNetAdapter adapter = DioAdapter();
+    MNetAdapter adapter = DioAdapter();
 
     // 使用 http 發送請求
-    MNetAdapter adapter = HttpAdapter();
+    // MNetAdapter adapter = HttpAdapter();
     return adapter.send(request);
   }
 
