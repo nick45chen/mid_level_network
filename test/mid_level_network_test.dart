@@ -6,7 +6,7 @@ void main() {
     final MNetRequest mockRequest = MockRequest();
     final MNetAdapter mockAdapter = MockAdapter();
     MNetResponse response = await mockAdapter.send(mockRequest);
-    expect(response.statusCode, 200);
+    expect(response.statusCode, 400);
     expect(response.data['data']['message'], 'success');
     expect(response.request.path(), '/api/user/demo');
   });
