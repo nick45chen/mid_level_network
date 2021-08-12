@@ -6,7 +6,7 @@ void main() {
     final MNetRequest mockRequest = MockRequest();
     final MNetAdapter mockAdapter = MockAdapter();
     MNetResponse response = await mockAdapter.send(mockRequest);
-    expect(response.statusCode, 400);
+    expect(response.statusCode, 200);
     expect(response.data['data']['message'], 'success');
     expect(response.request.path(), '/api/user/demo');
   });
@@ -40,7 +40,7 @@ class MockAdapter extends MNetAdapter {
       };
       return MNetResponse(
         data: mockJsonDecodeMap,
-        statusCode: 200,
+        statusCode: mockJsonDecodeMap['statusCode'],
         request: request,
       );
     });
