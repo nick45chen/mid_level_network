@@ -1,6 +1,6 @@
 # mid_level_network
 
-[![build](https://github.com/line/flutter_line_sdk/actions/workflows/build.yml/badge.svg)](hhttps://github.com/nick45chen/mid_level_network/actions/workflows/test-package.yml)
+[![build](https://github.com/nick45chen/mid_level_network/actions/workflows/test-package.yml/badge.svg)](https://github.com/nick45chen/mid_level_network/actions/workflows/test-package.yml)
 
 A flutter mid-level network framework between third party packaged and product.
 
