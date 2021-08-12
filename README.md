@@ -16,7 +16,7 @@ This will add a line like this to your package's pubspec.yaml (and run an implic
 dependencies:
   mid_level_network:
     git:
-      url: git@github.com:nick45chen/mid_level_network.git
+      url: git@github.com:nick45chen/mid_level_network_flutter.git
       ref: master
 ```
 
