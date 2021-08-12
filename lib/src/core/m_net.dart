@@ -62,12 +62,9 @@ class MNet {
     // 使用 dio 發送請求
     //MNetAdapter adapter = DioAdapter();
 
-    /// todo: HttpAdapter 有問題，以後再處理
     // 使用 http 發送請求
-    //MNetAdapter adapter = HttpAdapter();
-    //return adapter.send(request);
-
-    /// todo: return adapter
+    MNetAdapter adapter = HttpAdapter();
+    return adapter.send(request);
   }
 
   void _printLog(dynamic message) {

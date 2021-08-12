@@ -1,18 +1,18 @@
 part of '../../mid_level_network.dart';
 
 /// 統一網路層返回模式
-class MNetResponse<T> {
-  final T data;
+class MNetResponse {
+  final Map<String, dynamic> data;
   final MNetRequest request;
   final int statusCode;
-  final String statusMessage;
+  final String? statusMessage;
   final dynamic extra;
 
   MNetResponse({
     required this.data,
     required this.request,
     required this.statusCode,
-    required this.statusMessage,
+    this.statusMessage,
     this.extra,
   });
 
