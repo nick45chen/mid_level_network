@@ -11,3 +11,4 @@ part 'src/response/m_net_response.dart';
 part 'src/adapter/m_net_adapter.dart';
 part 'src/adapter/http_adapter.dart';
 part 'src/adapter/dio_adapter.dart';
+part 'src/adapter/mock_adapter.dart';
