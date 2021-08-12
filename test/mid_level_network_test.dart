@@ -8,6 +8,7 @@ void main() {
     MNetResponse response = await mockAdapter.send(mockRequest);
     expect(response.statusCode, 200);
     expect(response.data['data']['message'], 'success');
+    expect(response.request.path(), '/api/user/demo');
   });
 }
 
