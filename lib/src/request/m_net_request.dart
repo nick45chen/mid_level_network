@@ -7,7 +7,7 @@ enum HttpMethod {
 }
 
 /// 基礎請求
-abstract class BaseRequest {
+abstract class MNetRequest {
   // curl -X GET "http://authority/path?requestParam=11"
   // curl -X GET "https://authority.path/11"
 
@@ -49,13 +49,13 @@ abstract class BaseRequest {
   }
 
   /// 添加參數
-  BaseRequest addParam(String key, Object v) {
+  MNetRequest addParam(String key, Object v) {
     parameters[key] = v.toString();
     return this;
   }
 
   /// 添加 header
-  BaseRequest addHeader(String key, Object v) {
+  MNetRequest addHeader(String key, Object v) {
     header[key] = v.toString();
     return this;
   }

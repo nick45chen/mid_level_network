@@ -1,14 +1,9 @@
 part of '../../mid_level_network.dart';
 
-/// 網路請求抽象類
-abstract class MNetAdapter {
-  Future<MNetResponse<T>> send<T>(BaseRequest request);
-}
-
 /// 統一網路層返回模式
 class MNetResponse<T> {
   final T data;
-  final BaseRequest request;
+  final MNetRequest request;
   final int statusCode;
   final String statusMessage;
   final dynamic extra;
