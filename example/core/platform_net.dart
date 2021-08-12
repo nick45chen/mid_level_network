@@ -1,13 +1,13 @@
-part of '../../mid_level_network.dart';
+import 'package:mid_level_network/mid_level_network.dart';
 
-class MNet {
-  MNet._();
+class PlatformNet {
+  PlatformNet._();
 
-  static late MNet? _instance;
+  static PlatformNet? _instance;
 
-  static MNet getInstance() {
+  static PlatformNet getInstance() {
     if (_instance == null) {
-      _instance = MNet._();
+      _instance = PlatformNet._();
     }
     return _instance!;
   }
@@ -57,17 +57,14 @@ class MNet {
   Future<dynamic> _send<T>(MNetRequest request) async {
     _printLog('${request.httpMethod()} url: ${request.url()}');
     // 使用 mock 發送請求數據
-    //MNetAdapter adapter = MockAdapter();
+    MNetAdapter adapter = MockAdapter();
 
     // 使用 dio 發送請求
     //MNetAdapter adapter = DioAdapter();
 
-    /// todo: HttpAdapter 有問題，以後再處理
     // 使用 http 發送請求
-    //MNetAdapter adapter = HttpAdapter();
-    //return adapter.send(request);
-
-    /// todo: return adapter
+    // MNetAdapter adapter = HttpAdapter();
+    return adapter.send(request);
   }
 
   void _printLog(dynamic message) {
